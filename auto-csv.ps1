@@ -1,10 +1,18 @@
-$SERVIDOR = $env:SERVIDOR
-$ORIGEM   = $env:ORIGEM
-$DESTINO  = $env:DESTINO
+$1 = $env:SERVIDOR
+$2   = $env:ORIGEM
+$3  = $env:DESTINO
 
-"Servidor;Origem;Destino" > listDeploy.csv
+"$1" > SERVIDOR.txt
+"$2" > ORIGEM.txt
+"$3" > DESTINO.txt
+
+$SERVIDOR = Get-Content SERVIDOR.txt
+$ORIGEM = Get-Content ORIGEM.txt
+$DESTINO = Get-Content DESTINO.txt
+
+"Servidor,Origem,Destino" > listDeploy.csv
 For ($i=0; $i -lt $SERVIDOR.count; $i++) {
-    $SERVIDOR[$i],$ORIGEM[$i],$DESTINO[$i] -join ';' >> listDeploy.csv
+    $SERVIDOR[$i],$ORIGEM[$i],$DESTINO[$i] -join ',' >> listDeploy.csv
 }
 
 Get-Content listDeploy.csv
