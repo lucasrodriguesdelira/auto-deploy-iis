@@ -36,10 +36,10 @@ pipeline {
             }
         }
         
-        stage('Deploy'){
-            steps {
-                powershell './deploy.ps1'
-            }
-        }
+        //stage('Deploy'){
+          //  steps {
+            //    powershell './deploy.ps1'
+            //}
+        //}
     }
 }
