@@ -30,7 +30,7 @@ pipeline {
             }
         }
 
-        stage('Deploy'){
+        stage('ListDeploy'){
             steps {
                 powershell './auto-csv.ps1'
             }
