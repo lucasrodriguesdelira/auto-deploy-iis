@@ -1,4 +1,4 @@
-$change = "$env:CHANGE"
+$change = "$env:SCTASKNUMBER"
 $deploy = 1
 if ($change -eq "") {
     $date = Get-Date -Format "dd/MM/yyyy HH:mm:ss"
