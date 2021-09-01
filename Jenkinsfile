@@ -25,7 +25,7 @@ pipeline {
         stage('Mudança') {
             steps {
                 script {
-                    currentBuild.description = "NUMERO DA MUDANÇA: $env.SCTASKNUMBER"
+                    currentBuild.description = "NUMERO DA CHANGE: $env.SCTASKNUMBER"
                 }
             }
         }
